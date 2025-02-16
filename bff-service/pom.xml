@@ -24,6 +24,12 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.5.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>ru.netology</groupId>
             <artifactId>orders-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
