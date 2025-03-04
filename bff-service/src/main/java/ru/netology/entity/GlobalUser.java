@@ -9,6 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+
 public class GlobalUser {
 
     private int id;

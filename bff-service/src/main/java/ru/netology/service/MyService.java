@@ -14,16 +14,17 @@ import java.util.Arrays;
 public class MyService {
 
     public GlobalUser getUser(int id) {
+        String path = "http://localhost:%s/api";
+        RestClient restClientUser = RestClient.create(String.format(path, "8081"));
+        RestClient restClientOrder = RestClient.create(String.format(path, "8082"));
 
-        RestClient restClient = RestClient.create("http://localhost:8080/api");
-
-        User user = restClient
+        User user = restClientUser
                 .get()
                 .uri("/users/" + id)
                 .retrieve()
                 .body(User.class);
 
-        Order[] orderList = restClient
+        Order[] orderList = restClientOrder
                 .get()
                 .uri("/orders/by-user/" + id)
                 .retrieve().body(Order[].class);
